@@ -1,0 +1,57 @@
+.footer {
+  background-color: #f9d8f5;
+  padding: 5px;
+  font-size: 10px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-top: 50px;
+  border-radius: 7px;
+}
+
+.footerContent {
+  margin-bottom: 20px;
+}
+
+.storeTitle {
+  color: #d81b60;
+  font-weight: bold;
+}
+
+.instagramIcon {
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 820px) {
+  .footer {
+    background-color: #f9d8f5;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-top: -5px;
+  }
+  
+  .footerContent {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .storeTitle {
+    font-size: 18px;
+    color: #d81b60;
+    font-weight: bold;
+  }
+  
+  .instagramIcon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+}

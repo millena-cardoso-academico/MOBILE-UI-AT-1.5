@@ -1,0 +1,235 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.globalMenu {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.globalMenu svg {
+  margin-right: 10px;
+}
+
+.globalMenu span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.contextMenu {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mainContent {
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.ads {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #f9d8f5;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.footerContent {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.storeTitle {
+  font-size: 18px;
+  color: #d81b60;
+  font-weight: bold;
+}
+
+.instagramIcon {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+@media (min-width: 820px) {
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "mainLayout"
+      "footer";
+    height: 100vh;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .mainLayout {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: "leftColumn ads";
+    gap: 10px;
+  }
+
+  .leftColumn {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "globalMenu"
+      "contentArea";
+    gap: 10px;
+  }
+
+  .globalMenu {
+    grid-area: globalMenu;
+    justify-content: flex-start;
+  }
+
+  .contentArea {
+    display: grid;
+    grid-template-areas: "contextMenu mainContent";
+    gap: 10px;
+    grid-template-columns: 30% 70%;
+  }
+
+  .contextMenu {
+    grid-area: contextMenu;
+  }
+
+  .mainContent {
+    margin-right: 10px;
+    grid-area: mainContent;
+  }
+
+  .ads {
+    grid-area: ads;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .globalMenu.mobile {
+    display: none;
+  }
+
+  .globalMenu.desktop {
+    display: flex;
+  }
+}
+
+@media (max-width: 819px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainLayout {
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    flex-direction: column;
+  }
+
+  .contentArea {
+    flex-direction: column;
+  }
+
+  .topRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+  }
+
+  .globalMenu.mobile {
+    height: 100%;
+    flex: 7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header {
+    display: flex;
+    height: 100%;
+    flex: 3;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0px;
+  }
+
+  .ads {
+    flex-grow: 1;
+    max-height: 130px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .globalMenu.desktop {
+    display: none;
+  }
+}

@@ -1,0 +1,122 @@
+.globalMenu {
+  background-color: #efc7dd;
+  padding: 6px;
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hamburgerMenu {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.hamburgerMenu svg {
+  margin-left: 0;
+  fill: #d81b60;
+}
+
+.menuText {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Cutive Mono', monospace;
+  color: #d81b60;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menuItems {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+
+.menuItems li {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItems li a {
+  color: rgb(226, 10, 165);
+  text-decoration: none;
+}
+
+.menuOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+@media (max-width: 819px) {
+  .menuItems {
+    display: none;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 820px) {
+  .globalMenu {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 935px;
+  }
+
+  .menuItems {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menuItems li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .menuItems li:hover {
+    color: rgb(226, 10, 165);
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+}
